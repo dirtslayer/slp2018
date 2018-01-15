@@ -50,17 +50,24 @@
         width: 20%;
         }
 
-        div.banner {
-        background: url('https://lh3.googleusercontent.com/-LbRu8T0taVo/VbHbSZpw2qI/AAAAAAAAB24/U2HdWq-vLjATQF4tsZEXTgBpA0CzbiSPQCHMYBhgL/w0-h0/_N9A7432.jpg');
+        #slider1_container {
+    
         min-height: 533px;
-        background-size: 800px 533px;
-        background-position: center top;
-        background-repeat: no-repeat;
+        width : 800px;
+        margin:auto;
+        
+        }
+        
+        .slides {
+        cursor: move; 
+        overflow: hidden; 
+        width: 800px; height: 530px;
         }
 
         
+// style="position: relative; top: 0px; left: 0px; width: 800px; height: 530px;"
 
-
+// style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 800px; height: 530px;"
    
     
     </style>
@@ -70,6 +77,10 @@
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   crossorigin="anonymous"></script>
+   <script
+  src=" https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/26.8.0/jssor.slider.min.js"
+  crossorigin="anonymous"></script>
+   
   
   <h1>Steven Layton Photography</h1> 
   
@@ -81,9 +92,34 @@
   </ul>
   
   <hr>
-  <div class="banner" >
-  .
-  </div>
+
+  <script>
+    jQuery(document).ready(function ($) {
+        var options = { $AutoPlay: 1 };
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+    });
+</script>
+
+<div class="home_tab" >
+
+<div id="slider1_container" >
+    <!-- Slides Container -->
+    <div class="slides" u="slides" >
+        <div><img u="image" src="https://lh3.googleusercontent.com/-LbRu8T0taVo/VbHbSZpw2qI/AAAAAAAAB24/U2HdWq-vLjATQF4tsZEXTgBpA0CzbiSPQCHMYBhgL/w0-h0/_N9A7432.jpg" /></div>
+        <div><img u="image" src="https://lh3.googleusercontent.com/-At4PYm_Kok8/VbHYlIfyOnI/AAAAAAAAByc/YA-vOGfcfMweXSKPCPLD9BXBgYBEe0HOgCHMYBhgL/w0-h0/_N9A5567.jpg" /></div>
+    </div>
+</div>
+
+</div> <!-- home tab -->
+
+
+
+
+
+
+
+
+
   
   </body>
 </html>

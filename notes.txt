@@ -10,3 +10,6 @@ http://picasaweb.google.com/data/feed/api/user/stevenlaytonphotography?kind=albu
 
 results in albumfeed.txt
 
+test
+
+

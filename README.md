@@ -1,2 +1,4 @@
 # slp2018
-steven laytons photography
+# Steven Laytons Photography
+
+html, css, js 

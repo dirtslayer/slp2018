@@ -64,18 +64,13 @@
         width: 800px; height: 530px;
         }
 
-        
-// style="position: relative; top: 0px; left: 0px; width: 800px; height: 530px;"
-
-// style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 800px; height: 530px;"
    
-    
     </style>
   </head>
   <body>
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
    <script
   src=" https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/26.8.0/jssor.slider.min.js"
@@ -90,13 +85,60 @@
   <li> Bio </li>
   <li> Contact </li>
   </ul>
+  <script>
+  /*
+  current tab = Home
   
+  on menu.li click
+  
+  transition ( from current to clicked )
+  
+  
+  
+  
+  */
+  </script>
   <hr>
 
   <script>
     jQuery(document).ready(function ($) {
+    
         var options = { $AutoPlay: 1 };
         var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+        
+        var album_req_url = "http://picasaweb.google.com/data/feed/api/user/stevenlaytonphotography?kind=album&access=public&fields=entry%28media:group/media:title,gphoto:numphotos,link[@rel=%27http%3A%2F%2Fschemas.google.com%2Fg%2F2005%23feed%27]%28@href%29%29&alt=json";
+        
+        $.getJSON( album_req_url, function( data ) {
+            var items = [];
+            $.each( data.feed.entry, function( key, val ) {
+            items.push( "<li id='" + key + "'> key:" + key +" val: " + val + "</li>" );
+        });
+
+        $( "<ul/>", {
+            "class": "my-new-list",
+            html: items.join( "" )
+        }).appendTo( "body" );
+        });
+            
+            
+        
+        
+        /*
+        
+        get albums
+        
+        get url for each album
+        
+        with slideshow album populate slider1_container
+        
+        with list of albums make collage of album covers
+        
+        
+        
+        
+        */
+        
+        
     });
 </script>
 

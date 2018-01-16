@@ -1,167 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=300, initial-scale=1">
-      <title>Steven Layton Photography</title>
-      <meta property="og:url" content="http://www.stevenlaytonsphotography.ca">
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Steven Layton Photography</title>
+        <meta name="description" content="Photography, Fine Art, Photo Journalism, Alberta">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:url" content="http://www.stevenlaytonsphotography.ca">
       <meta property="og:title" content="Steven Laytons Photography">
       <meta property="og:description" content="Photography, Fine Art, Photo Journalism, Alberta">
       <meta property="og:image" content="http://lh3.googleusercontent.com/-LMx7Clsjx2M/VX-kN0fo7PI/AAAAAAAABw0/uNJZxzw6ZnE/s450/5.jpg">
-      
+
       <link href="http://fonts.googleapis.com/css?family=Rouge+Script" rel="stylesheet" >
       <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <meta content="">
-    <style>
-     * {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
-     }
-     
 
-        @media only screen  and (min-width : 600px) {    
-        h1 {
-        font-size: 4em;
-        }
-        ul.menu {
-         font-size: 2em;
-         }
-         }
 
-        h1 {
-        font-family: 'Rouge Script', cursive !important;
-        text-align: center;
-        padding-bottom: 1em;
-        padding-top: 1em;
-        }
-        ul.menu {
-        font-family: 'Josefin Sans', sans-serif;
-       list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        color: green;
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
 
-        }
-        ul.menu > li {
-        display: inline-block;
-        width: 20%;
-        }
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
 
-        #slider1_container {
-    
-        min-height: 533px;
-        width : 800px;
-        margin:auto;
-        
-        }
-        
-        .slides {
-        cursor: move; 
-        overflow: hidden; 
-        width: 800px; height: 530px;
-        }
+        <!-- Add your site or application content here -->
 
-   
-    </style>
-  </head>
-  <body>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-   <script
-  src=" https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/26.8.0/jssor.slider.min.js"
-  crossorigin="anonymous"></script>
-   
-  
-  <h1>Steven Layton Photography</h1> 
-  
+        <h1>Steven Layton Photography</h1>
+
+        <hr/>
+
   <ul class="menu" >
   <li> Home </li> <!-- top of page -->
   <li> Portfolio </li> <!-- album selector -->
   <li> Bio </li>
   <li> Contact </li>
   </ul>
-  <script>
-  /*
-  current tab = Home
-  
-  on menu.li click
-  
-  transition ( from current to clicked )
-  
-  
-  
-  
-  */
-  </script>
-  <hr>
 
-  <script>
-    jQuery(document).ready(function ($) {
-    
-        var options = { $AutoPlay: 1 };
-        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
-        
-        var album_req_url = "http://picasaweb.google.com/data/feed/api/user/stevenlaytonphotography?kind=album&access=public&fields=entry%28media:group/media:title,gphoto:numphotos,link[@rel=%27http%3A%2F%2Fschemas.google.com%2Fg%2F2005%23feed%27]%28@href%29%29&alt=json";
-        
-        $.getJSON( album_req_url, function( data ) {
-            var items = [];
-            $.each( data.feed.entry, function( key, val ) {
-            items.push( "<li id='" + key + "'> key:" + key +" val: " + val + "</li>" );
-        });
-
-        $( "<ul/>", {
-            "class": "my-new-list",
-            html: items.join( "" )
-        }).appendTo( "body" );
-        });
-            
-            
-        
-        
-        /*
-        
-        get albums
-        
-        get url for each album
-        
-        with slideshow album populate slider1_container
-        
-        with list of albums make collage of album covers
-        
-        
-        
-        
-        */
-        
-        
-    });
-</script>
-
-<div class="home_tab" >
-
-<div id="slider1_container" >
-    <!-- Slides Container -->
-    <div class="slides" u="slides" >
-        <div><img u="image" src="https://lh3.googleusercontent.com/-LbRu8T0taVo/VbHbSZpw2qI/AAAAAAAAB24/U2HdWq-vLjATQF4tsZEXTgBpA0CzbiSPQCHMYBhgL/w0-h0/_N9A7432.jpg" /></div>
-        <div><img u="image" src="https://lh3.googleusercontent.com/-At4PYm_Kok8/VbHYlIfyOnI/AAAAAAAAByc/YA-vOGfcfMweXSKPCPLD9BXBgYBEe0HOgCHMYBhgL/w0-h0/_N9A5567.jpg" /></div>
-    </div>
-</div>
-
-</div> <!-- home tab -->
+<hr/>
 
 
+<!--
+         <script
+  src=" https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/26.8.0/jssor.slider.min.js"
+  crossorigin="anonymous"></script>
+-->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
 
-
-
-
-
-
-
-  
-  </body>
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
 </html>
